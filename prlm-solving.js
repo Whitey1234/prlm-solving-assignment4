@@ -29,14 +29,57 @@ function validContact( contacts ) {
     if ( " " == contact){
 return false
     }
-
+   }
  
   if (num[0] == contacts[0] && num[1] == contacts[1] && degit.length == contacts.length){
     return true
 
-  }
-return false;
+ 
+}
+else {
+    return false;
 }
 }
- console.log (validContact(true))
+ //console.log (validContact("01234 567899"))
+
+
+
+ /*problem 3 */
+function  willSuccess( marks ) {
+ let passResult = [];
+ let failResult = [];
+
+if (Array.isArray(passResult) !== Array.isArray(marks) ){
+    return "invalid"
+}
+
+     for ( let mark of marks ){
+        //console.log (mark)
+        if ( mark >= 50){
+            passResult.push(mark)
+        }
+        else{
+        
+        
+        failResult.push(mark)
+
+
+
+     }
+
+
+}
+//console.log (Array.isArray(passResult),failResult)
+if (passResult.length > failResult.length ){
+    return true;
+}
+else{
+    return false;
+}
+
+}
+
+//console.log (willSuccess([48, 48, 50, 50, 100]));
+
+
  
