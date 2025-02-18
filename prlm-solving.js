@@ -12,7 +12,7 @@ function calculateVAT( price ) {
     }
 }
  
-console.log (calculateVAT(-1));
+//console.log (calculateVAT(-1));
 
 
                                /*Problem2 */
@@ -57,12 +57,12 @@ if (Array.isArray(passResult) !== Array.isArray(marks) ){
      for ( let mark of marks ){
         //console.log (mark)
         if ( mark >= 50){
-            passResult.push(mark)
+            passResult.push(mark);
         }
         else{
         
         
-        failResult.push(mark)
+        failResult.push(mark);
 
 
 
@@ -87,11 +87,12 @@ else{
 
 function  validProposal( person1 , person2 ) {
     // You have to write your code here
-    const object = { }
+    const object = { };
     
-    const ageDef = Math.abs(person1.age - person2.age)
+    const ageDef = Math.abs(person1.age - person2.age);
 //console.log (ageDef )
-if (typeof(person1) !== typeof(object) && typeof(person2) !== typeof(object)){
+
+if (typeof(person1) !== typeof(object) || typeof(person2) !== typeof(object) ||Array.isArray(person1,person2)){
  return "invallid"
 }
     else if (person1.gender !== person2.gender && ageDef <= 7 ){
@@ -103,10 +104,8 @@ if (typeof(person1) !== typeof(object) && typeof(person2) !== typeof(object)){
 //console.log (typeof(person1.gender))
 }
 
-// console.log ( validProposal({ name: "toya", gender: "female", age: 24 },
-//     { name: "bjoy", gender: "male", age: 32 }
-    
-//     ))
+//  console.log ( validProposal( { name: "bjoy", gender: "male", age: 32 },
+//     { name: "bjoy", gender: "female", age: 32 }))
 
                    /* problem 5 */
 
