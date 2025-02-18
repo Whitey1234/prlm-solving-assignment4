@@ -1,7 +1,7 @@
 /*Problem1 */
 function calculateVAT( price ) {
     const number = 1 ;
-    if (typeof(number) !== typeof(price) ){
+    if (typeof(number) !== typeof(price) || price < 0 ){
 
        return "invalid"
     }
@@ -12,7 +12,7 @@ function calculateVAT( price ) {
     }
 }
  
-//console.log (calculateVAT(1500));
+console.log (calculateVAT(-1));
 
 
                                /*Problem2 */
@@ -122,7 +122,6 @@ function  calculateSleepTime( times ) {
             return " invalid"
         }
         count += time ;
-
     }
     const hour = Math.floor( count/3600);
     const minutes = Math.floor ( (count % 3600) / 60 );
@@ -137,4 +136,3 @@ function  calculateSleepTime( times ) {
 
 
 
- 
