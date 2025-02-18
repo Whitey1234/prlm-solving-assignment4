@@ -82,4 +82,31 @@ else{
 //console.log (willSuccess([48, 48, 50, 50, 100]));
 
 
+/*problem4 */
+
+function  validProposal( person1 , person2 ) {
+    // You have to write your code here
+    const object = { }
+    
+    const ageDef = Math.abs(person1.age - person2.age)
+//console.log (ageDef )
+if (typeof(person1) !== typeof(object) && typeof(person2) !== typeof(object)){
+ return "invallid"
+}
+    else if (person1.gender !== person2.gender && ageDef <= 7 ){
+    return true ;
+   }
+   
+   return false;
+   
+//console.log (typeof(person1.gender))
+}
+
+console.log ( validProposal({ name: "toya", gender: "female", age: 24 },
+    { name: "bjoy", gender: "male", age: 32 }
+    
+    ))
+
+
+
  
