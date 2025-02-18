@@ -14,7 +14,8 @@ function calculateVAT( price ) {
  
 //console.log (calculateVAT(1500));
 
-    /*Problem2 */
+
+                               /*Problem2 */
 
 
 function validContact( contacts ) {
@@ -44,7 +45,7 @@ else {
 
 
 
- /*problem 3 */
+                                         /*problem 3 */
 function  willSuccess( marks ) {
  let passResult = [];
  let failResult = [];
@@ -82,7 +83,7 @@ else{
 //console.log (willSuccess([48, 48, 50, 50, 100]));
 
 
-/*problem4 */
+                             /*problem4 */
 
 function  validProposal( person1 , person2 ) {
     // You have to write your code here
@@ -102,10 +103,37 @@ if (typeof(person1) !== typeof(object) && typeof(person2) !== typeof(object)){
 //console.log (typeof(person1.gender))
 }
 
-console.log ( validProposal({ name: "toya", gender: "female", age: 24 },
-    { name: "bjoy", gender: "male", age: 32 }
+// console.log ( validProposal({ name: "toya", gender: "female", age: 24 },
+//     { name: "bjoy", gender: "male", age: 32 }
     
-    ))
+//     ))
+
+                   /* problem 5 */
+
+
+function  calculateSleepTime( times ) {
+     
+    let count = 0;
+    
+
+    
+    for ( const time of times){
+        if ( typeof(time) !== typeof(count) ){
+            return " invalid"
+        }
+        count += time ;
+
+    }
+    const hour = Math.floor( count/3600);
+    const minutes = Math.floor ( (count % 3600) / 60 );
+    const seconds = Math.floor(count % 60) ;
+   // console.log ( hour,minutes,seconds)
+   const totalSleepTime = { hour : hour ,minute : minutes , second : seconds }
+   return totalSleepTime;
+}
+// console.log ( calculateSleepTime([]) ) 
+
+
 
 
 
